@@ -1,0 +1,13 @@
+#!/bin/bash
+# Commands to set up aurutils
+# Build & install aurutils
+git clone https://aur.archlinux.org/aurutils.git && cd aurutils/
+makepkg -si
+echo "IMPORTANT!"
+echo "requirement to edit the pacman.conf file and allow our custom repo:"
+echo .
+echo "> sudo vim /etc/pacman.conf"
+echo "> sudo install -d /home/custompkgs -o $USER"
+echo "> repo-add /home/custompkgs/custom.db.tar"
+echo "> sudo pacman -Syu"
+echo "> sudo pacman -S vifm"
