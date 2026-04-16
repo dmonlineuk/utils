@@ -1,0 +1,3 @@
+#!/bin/bash
+# Record of command used to connect to rdp
+xfreerdp /u:dan /v:dev-01 /kbd:0x00000809 /sound
