@@ -1,0 +1,6 @@
+#!/bin/bash
+# Set up rdp for remote access
+aur sync xrdp
+aur sync xorgxrdp --margs --skippgpcheck
+sudo pacman -S xrdp xorgxrdp
+sudo systemctl enable --now xrdp.service xrdp-sesman.service
