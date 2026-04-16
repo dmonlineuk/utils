@@ -1,0 +1,4 @@
+#!/bin/bash
+# For connecting to unraid shares
+mkdir -p /mnt/isos
+sudo mount -t cifs //192.168.0.10/isos /mnt/isos -o guest,rw,uid=$(id -u),gid=$(id -u),file_mode=0666,dir_mode=0777
