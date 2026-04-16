@@ -1,0 +1,5 @@
+#!/bin/bash
+# Setting up firewall
+sudo ufw allow 22/tcp
+sudo ufw allow 3389/tcp
+sudo ufw enable
