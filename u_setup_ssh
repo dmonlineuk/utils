@@ -1,0 +1,3 @@
+#!/bin/bash
+# Start ssh
+sudo systemctl enable --now sshd.service
