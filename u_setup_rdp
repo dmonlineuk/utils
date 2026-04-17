@@ -1,5 +1,6 @@
 #!/bin/bash
 # Set up rdp for remote access
+sudo pacman -S pkg-config
 aur sync xrdp
 aur sync xorgxrdp --margs --skippgpcheck
 sudo pacman -S xrdp xorgxrdp
