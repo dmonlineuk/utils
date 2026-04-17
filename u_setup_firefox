@@ -1,0 +1,16 @@
+#!/bin/bash
+# For xfce4, we can use app finder if we set up this entry
+here=`pwd`
+cd
+mkdir -p .local/share/applications && cd .local/share/applications
+cat > firefox.desktop << "EOF"
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Firefox
+Icon=firefox
+Exec=firefox
+Categories=Network;WebBrowser;
+EOF
+
+cd $here
