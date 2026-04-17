@@ -1,0 +1,4 @@
+#!/bin/bash
+# Runs requirements against pacman 
+sudo pacman -Syu
+sudo pacman -S $(cat ./requirements)
