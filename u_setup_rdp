@@ -2,6 +2,13 @@
 # Set up rdp for remote access
 sudo pacman -S pkg-config
 aur sync xrdp
-aur sync xorgxrdp --margs --skippgpcheck
-sudo pacman -S xrdp xorgxrdp
+aur sync xorgxrdp # --margs --skippgpcheck ## Are these needed? Key may be valid
+aur sync pulseaudio-module-xrdp
+sudo pacman -S xrdp xorgxrdp pulseaudio-module-xrdp
 sudo systemctl enable --now xrdp.service xrdp-sesman.service
+echo "> sudo vim /etc/xrdp/startwm.sh"
+echo "...comment out last two lines and add the following:"
+echo "export PULSE_SCRIPT=/etc/xrdp/pulse/default.pa"
+echo "pulseaudio --kill 2>/dev/null"
+echo "pulseaudio --start"
+echo "exec startxfce4 "
